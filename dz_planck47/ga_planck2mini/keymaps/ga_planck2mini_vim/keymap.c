@@ -57,12 +57,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             Bkspc   ,    1    ,    2   ,  [  3 ] ,    4    ,    5   ,       6    ,    7   ,    8   ,      9   ,    0    ,   ____,
             Enter   , Delete  , [____] ,[Lscroll],(Rscroll),  ____  ,      [~grv]   ,(_und ),[ = ] ,   [ [brc],     ]brc,   ____,
 	    ____    , Lscroll , Rscroll,scroll Up, scrollDn,  ____  ,       |pipe,    -dash, `tild ,     'quot,  \backsl,   ____,
-	    ____    , SysReq  ,ToggleL1,  [____]  , {____} ,        ____  ,        Layer 4, [____] ,  ToggleL1, Capslock,CAPSWRD.*/
+	    ____    , SysReq  ,ToggleL1,  [____]  , {____} ,        ____  ,        Layer 4, [____] ,  ToggleL1, app/menu,   ____.*/
 	KEYMAP(
 		KC_BSPC,    KC_1,   KC_2,     KC_3,     KC_4,    KC_5,          KC_6,    KC_7,     KC_8,      KC_9,   KC_0,   KC_TRNS,
 		KC_ENT,  KC_DEL,  KC_TRNS,    KC_WH_L, KC_WH_R, KC_TRNS,        KC_GRV,  KC_UNDS, KC_EQL,    KC_LBRC, KC_RBRC, KC_TRNS,
 		KC_TRNS, KC_WH_L, KC_WH_R,    KC_WH_U, KC_WH_D, KC_TRNS,        KC_PIPE, KC_MINS, KC_TILD,    KC_QUOT, KC_BSLS, KC_TRNS,
-		KC_TRNS, KC_SYSREQ, TG(1),    KC_TRNS, KC_TRNS,        KC_TRNS,          MO(4), KC_TRNS,     TG(1), KC_CAPS, CAPSWRD),
+		KC_TRNS, KC_SYSREQ, TG(1),    KC_TRNS, KC_TRNS,        KC_TRNS,          MO(4), KC_TRNS,     TG(1), KC_APP, KC_TRNS),
 /* *** *** *** *** *** *** *** *** *** */
 
 
@@ -70,27 +70,27 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Layer 3 (inside right of space) - navigation keys:
 
             ____    ,scrollUp , Lclick ,[mouse U], Rclick  ,  ____  ,    insert  , pageUp , scrllLock ,  pageDown,  Home   , delete,
-            ____    ,scrollDn ,[mouseL],[mouse D],(mouse R),  ____  ,     [left] , (down) , [ up  ] ,   [right],   End   ,   ____,
+            Capslock,scrollDn ,[mouseL],[mouse D],(mouse R),  ____  ,     [left] , (down) , [ up  ] ,   [right],   End   ,   ____,
 	    ____    , Lscroll , Rscroll,Calculator, ____   ,  ____  ,    numLock ,scrollDn,scrollUp,   Lscroll,  Rscroll,   ____,
-	    ____    ,printScrn,ToggleL1,  [____]  , Layer 4,        ____  ,        {____} , [____] ,  ToggleL1, app/menu,   ____.*/
+	    ____    ,printScrn,ToggleL1,  [____]  , Layer 4,        ____  ,        {____} , [____] ,  ToggleL1, CAPSWRD,   ____.*/
 	KEYMAP(
 		KC_TRNS, KC_WH_U, KC_BTN1,    KC_MS_U, KC_BTN2, KC_TRNS,        KC_INS,  KC_PGUP, KC_SLCK,      KC_PGDN, KC_HOME, KC_DEL,
-		KC_TRNS, KC_WH_D, KC_MS_L,    KC_MS_D, KC_MS_R, KC_TRNS,         KC_LEFT, KC_DOWN,  KC_UP,   KC_RGHT, KC_END, KC_TRNS,
+		KC_CAPS, KC_WH_D, KC_MS_L,    KC_MS_D, KC_MS_R, KC_TRNS,         KC_LEFT, KC_DOWN,  KC_UP,   KC_RGHT, KC_END, KC_TRNS,
 		KC_TRNS, KC_WH_L, KC_WH_R,    KC_CALC, KC_TRNS, KC_TRNS,        KC_NLCK, KC_WH_D, KC_WH_U,    KC_WH_L, KC_WH_R, KC_TRNS,
-		KC_TRNS, KC_PSCR, TG(1),      KC_TRNS, MO(4),          KC_TRNS,          KC_TRNS, KC_TRNS,    TG(1), KC_APP, KC_TRNS),
+		KC_TRNS, KC_PSCR, TG(1),      KC_TRNS, MO(4),          KC_TRNS,          KC_TRNS, KC_TRNS,    TG(1), CAPSWRD, KC_TRNS),
 /* *** *** *** *** *** *** *** *** *** */
 
 
 /* *** *** *** *** *** *** *** *** *** */
 /* Layer 4 (holding both inside func keys) - macros, LED, laptop display brightness, media (rwd/ff may not work):
 
-            Layer 5 ,  ____   ,RGB hue-,[RGBbri+], RGB hue+,RGBplain,     ____   ,play/paus, scnBri+ ,  ____   , ____   ,   ____,
-            ____    ,  ____   ,[RGBsat-],[RGBbri-],(RBGsat+),RGBon/off,  [____]  ,(mdiaRwd),[scnBri-],[mdiaFF],  ____   ,   ____,
+            Layer 5 ,  ____   ,RGB hue-,[RGBbri+], RGB hue+,RGBplain,     ____   ,play/paus,   ____ ,  ____   , ____   ,   ____,
+            ____    ,  ____   ,[RGBsat-],[RGBbri-],(RBGsat+),RGBon/off,  [mdiaRwd],(scnBri-),[scnBri+],[mdiaFF],  ____   ,   ____,
             recMacro1,playMcr1, ____   ,   ____  , RGB:mode,RGBswirl,     ____   ,  mute  , volume-,   volume+,recMacro2,plyMcr2,
             ____    ,  ____   , ____   ,  [____] , {____}  ,        ____  ,        {____} , [____] ,    ____  ,  ____  ,    ____.*/
 	KEYMAP(
-		MO(5),   KC_TRNS, RGB_HUD,    RGB_VAI, RGB_HUI, RGB_M_P,      KC_TRNS, KC_MPLY, KC_BRIU,    KC_TRNS, KC_TRNS, KC_TRNS,
-		KC_TRNS, KC_TRNS, RGB_SAD,    RGB_VAD, RGB_SAI, RGB_TOG,      KC_TRNS, KC_MRWD, KC_BRID,    KC_MFFD, KC_TRNS, KC_TRNS,
+		MO(5),   KC_TRNS, RGB_HUD,    RGB_VAI, RGB_HUI, RGB_M_P,      KC_TRNS, KC_MPLY, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS,
+		KC_TRNS, KC_TRNS, RGB_SAD,    RGB_VAD, RGB_SAI, RGB_TOG,      KC_MRWD, KC_BRID, KC_BRIU,    KC_MFFD, KC_TRNS, KC_TRNS,
 		DM_REC1, DM_PLY1, KC_TRNS,    KC_TRNS, RGB_MOD, RGB_M_SW,     KC_TRNS, KC_MUTE, KC_VOLD,    KC_VOLU, DM_PLY2, DM_REC2,
 		KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS,        KC_TRNS,        KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS),
 /* *** *** *** *** *** *** *** *** *** */
