@@ -2,24 +2,32 @@
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-/* A 40% Planck layout for productivity, inspired on standard Qwerty and Ducky one2mini, by guilaman. Main features:
-   0-BASE layer with Shift,Control,Alt on both sides,Win/Super on right,SysReq directly available on left(Super under layer 2);
-   3-NAVIGATION layer: HJKL arrows+home/end,pgUp/Dn,insert around; ESDF+WR mouse controls; M,./ four-way scroll with two fingers.
-   2-SYMBOLS layer: quotes and brackets on right side plus more convenience,top number row(shifted by OS), ZXCV four-way scroll.
+/* A 40% Planck layout for productivity, inspired on standard Qwerty and Ducky one2mini, by guilaman.
+ 
+   Main features:
+   0-BASE layer with Shift, Control, Alt, Win/Super on both sides;
+   3-NAVIGATION layer: HJKL arrows+home/end,pgUp/Dn,insert around; ESDF+WR mouse controls; M,./ four-way scroll with two fingers; 
+   2-SYMBOLS layer: quotes and brackets on right side plus more,top number row(shifted by OS), ZXCV four-way scroll.
    1-NUMPAD+Fs: self-explanatory; 4-MEDIA+LED controls; 5-BOOTLOADER key hidden.
    numberpad and F-keys, mouse and media controls; One-hand scroll,Enter,Backspace,Delete,Tab,Esc accessible with either hand.
-   *This version of the keymap has HJKL arrow keys to match Vim actions,instead of the Ducky One2mini's more normie-friendly IJKL.
+   *This version of the keymap has HJKL arrow keys to match Vim gestures,instead of the Ducky One2mini's more normie-friendly IJKL.
    Thanks to Jack Humbert and the QMK people. OLKB keyboards recommended.
 
+   Other clarification:
    Spaces around the keycodes don't have any effect; I added them for readability and to match the shape of the keyboard.
    Commented-out section above each layer's keymap explains the keycodes more clearly.
    Point-of-reference keys marked with [], F and J marked with (), layer-activating keys marked with {} where applicable.
+
+   File usage:
+   * I am currently using an old version of QMK that works with this files,
+     but the newest version requires changes that I haven't had time to research and make yet.
 
    You can change your keycodes to your liking; see documentation at [ qmk.fm ].
    When flashing you will see error info for debugging if something breaks.
    Command for flashing in QMK after adding this whole keyboard folder to "qmk_firmware/keyboards/":
    [with QMK MSYS in Windows]:  qmk flash -kb dz_planck47/ga_planck2mini -km ga_planck2mini_vim
    [in Linux terminal after "cd qmk_firmware"]: sudo make dz_planck47/ga_planck2mini:ga_planck2mini_vim:dfu
+
 */
 /* *** *** *** *** *** *** *** *** *** */
 /* Layer 0 - base:
@@ -28,14 +36,14 @@ fingers:   (pinky     pinky    ring       middle   index    index          index
             Esc     ,   Q    ,   W    ,   [ E ]  ,   R    ,   T    ,       Y    ,   U    ,   I    ,     O    ,   P    ,   Bkspc,
             Tab     ,   A    , [ S ]  ,   [ D ]  , ( F )  ,   G    ,     [ H ]  , ( J )  , [ K ]  ,   [ L ]  ,   ;    ,   Enter,
 	    LShift  ,   Z    ,   X    ,     C    ,   V    ,   B    ,       N    ,   M    ,   ,    ,     .    ,   /    ,  RShift,
-	    LControl, SysReq , Layer1 ,  [L Alt] , Layer2 ,        Space ,       Layer3  ,[R Alt] ,  Layer1  , Super  ,RControl.
+	    LControl,  Super , Layer1 ,  [L Alt] , Layer2 ,        Space ,       Layer3  ,[R Alt] ,  Layer1  , Super  ,RControl.
 
 fingers:   (pinky     pinky    thumb      thumb    thumb           thumb           thumb    thumb        thumb   pinky   pinky) */
 	KEYMAP(
 		KC_ESC,    KC_Q,  KC_W,       KC_E,  KC_R,   KC_T,           KC_Y,   KC_U,   KC_I,        KC_O,   KC_P, KC_BSPC,
 		KC_TAB,    KC_A,  KC_S,       KC_D,  KC_F,   KC_G,           KC_H,   KC_J,   KC_K,        KC_L,   KC_SCLN, KC_ENT,
 		KC_LSFT,   KC_Z,  KC_X,       KC_C,  KC_V,   KC_B,           KC_N,   KC_M,   KC_COMM,     KC_DOT, KC_SLSH, KC_RSFT,
-		KC_LCTL, KC_SYSREQ, MO(1),      KC_LALT, MO(2),        KC_SPC,        MO(3),   KC_RALT,     MO(1),  KC_LGUI, KC_RCTL),
+		KC_LCTL, KC_LGUI, MO(1),      KC_LALT, MO(2),        KC_SPC,        MO(3),   KC_RALT,     MO(1),  KC_LGUI, KC_RCTL),
 /* *** *** *** *** *** *** *** *** *** */
 
 
@@ -60,12 +68,12 @@ fingers:   (pinky     pinky    thumb      thumb    thumb           thumb        
             Bkspc   ,    1    ,    2   ,  [  3 ] ,    4    ,    5   ,       6    ,    7   ,    8   ,      9   ,    0    ,   ____,
             Enter   , Delete  , [____] ,[Lscroll],(Rscroll),  ____  ,      [~grv]   ,(_und ),[ = ] ,   [ [brc],     ]brc,   ____,
 	    ____    , Lscroll , Rscroll,scroll Up, scrollDn,  ____  ,       |pipe,    -dash, `tild ,     'quot,  \backsl,   ____,
-	    ____    ,  Super  ,ToggleL1,  [____]  , {____} ,        ____  ,        Layer 4, [____] ,  ToggleL1, app/menu,   ____.*/
+	    ____    , SysReq  ,ToggleL1,  [____]  , {____} ,        ____  ,        Layer 4, [____] ,  ToggleL1, app/menu,   ____.*/
 	KEYMAP(
 		KC_BSPC,    KC_1,   KC_2,     KC_3,     KC_4,    KC_5,          KC_6,    KC_7,     KC_8,      KC_9,   KC_0,   KC_TRNS,
 		KC_ENT,  KC_DEL,  KC_TRNS,    KC_WH_L, KC_WH_R, KC_TRNS,        KC_GRV,  KC_UNDS, KC_EQL,    KC_LBRC, KC_RBRC, KC_TRNS,
 		KC_TRNS, KC_WH_L, KC_WH_R,    KC_WH_U, KC_WH_D, KC_TRNS,        KC_PIPE, KC_MINS, KC_TILD,    KC_QUOT, KC_BSLS, KC_TRNS,
-		KC_TRNS, KC_LGUI, TG(1),    KC_TRNS, KC_TRNS,        KC_TRNS,          MO(4), KC_TRNS,     TG(1), KC_APP, KC_TRNS),
+		KC_TRNS, KC_SYSREQ, TG(1),    KC_TRNS, KC_TRNS,        KC_TRNS,          MO(4), KC_TRNS,     TG(1), KC_APP, KC_TRNS),
 /* *** *** *** *** *** *** *** *** *** */
 
 
