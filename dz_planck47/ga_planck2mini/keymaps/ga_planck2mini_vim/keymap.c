@@ -90,7 +90,7 @@ fingers:   (pinky     pinky    thumb      thumb    thumb           thumb        
 	    ____    ,printScrn,ToggleL1,  {____}  , Layer 4,        ____  ,        [____] , {____} ,  ToggleL1, CAPSWRD,   ____.*/
 	KEYMAP(
 		KC_TRNS, KC_WH_U, KC_BTN1,    KC_MS_U, KC_BTN2, KC_TRNS,        KC_INS,  KC_PGUP, KC_SLCK,      KC_PGDN, KC_HOME, KC_DEL,
-		KC_CAPS, KC_WH_D, KC_MS_L,    KC_MS_D, KC_MS_R, KC_TRNS,         KC_LEFT, KC_DOWN,  KC_UP,   KC_RGHT, KC_END, KC_TRNS,
+		KC_CAPS, KC_WH_D, KC_MS_L,    KC_MS_D, KC_MS_R, KC_TRNS,        KC_LEFT, KC_DOWN,  KC_UP,   KC_RGHT, KC_END, KC_TRNS,
 		KC_TRNS, KC_WH_L, KC_WH_R,    KC_CALC, KC_TRNS, KC_TRNS,        KC_NLCK, KC_WH_D, KC_WH_U,    KC_WH_L, KC_WH_R, KC_TRNS,
 		KC_TRNS, KC_PSCR, TG(1),      KC_TRNS, MO(4),          KC_TRNS,          KC_TRNS, KC_TRNS,    TG(1), CAPSWRD, KC_TRNS),
 /* *** *** *** *** *** *** *** *** *** */
@@ -99,14 +99,14 @@ fingers:   (pinky     pinky    thumb      thumb    thumb           thumb        
 /* *** *** *** *** *** *** *** *** *** */
 /* Layer 4 (holding both inside func keys) - macros, LED, laptop display brightness, media (rwd/ff may not work):
 
-            Layer 5 ,  ____   ,RGB hue-,(RGBbri+), RGB hue+,RGBplain,     ____   ,play/paus,   ____ ,  ____   , ____   ,   ____,
-            ____    ,  ____   ,(RGBsat-),(RGBbri-),{RBGsat+},RGBon/off,  (mdiaRwd),{scnBri-},(scnBri+),(mdiaFF),  ____   ,   ____,
-            recMacro1,playMcr1, ____   ,   ____  , RGB:mode,RGBswirl,     ____   ,  mute  , volume-,   volume+,recMacro2,plyMcr2,
-            ____    ,  ____   , ____   ,  {____} , [____]  ,        ____  ,        [____] , {____} ,    ____  ,  ____  ,    ____.*/
+            Layer 5 ,  ____   ,RGB hue-,(RGBbri+), RGB hue+,RGBplain,     ____   ,play/paus,   ____ ,  ____   ,    ____ ,    ____,
+            ____    ,  ____   ,(RGBsat-),(RGBbri-),{RBGsat+},RGBon/off,  (mdiaRwd),{scnBri-},(scnBri+),(mdiaFF),   ____ ,    ____,
+            recMacro1, ____   , playMcr1,  ____  , RGB:mode,RGBswirl,       mute  , volume-,   volume+, plyMacro2, ____ , recMcr2,
+            ____    ,  ____   , ____   ,  {____} , [____]  ,        ____  ,        [____] ,    {____} ,  ____  ,   ___  ,  ____.*/
 	KEYMAP(
 		MO(5),   KC_TRNS, RGB_HUD,    RGB_VAI, RGB_HUI, RGB_M_P,      KC_TRNS, KC_MPLY, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS,
 		KC_TRNS, KC_TRNS, RGB_SAD,    RGB_VAD, RGB_SAI, RGB_TOG,      KC_MRWD, KC_BRID, KC_BRIU,    KC_MFFD, KC_TRNS, KC_TRNS,
-		DM_REC1, DM_PLY1, KC_TRNS,    KC_TRNS, RGB_MOD, RGB_M_SW,     KC_TRNS, KC_MUTE, KC_VOLD,    KC_VOLU, DM_PLY2, DM_REC2,
+		DM_REC1, KC_TRNS, DM_PLY1,    KC_TRNS, RGB_MOD, RGB_M_SW,     KC_MUTE, KC_VOLD, KC_VOLU,    DM_PLY2, KC_TRNS, DM_REC2,
 		KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS,        KC_TRNS,        KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS),
 /* *** *** *** *** *** *** *** *** *** */
 
