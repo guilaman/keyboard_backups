@@ -76,7 +76,7 @@ fingers:   (pinky     pinky    thumb      thumb    thumb           thumb        
 	KEYMAP(
 		KC_BSPC,    KC_1,   KC_2,     KC_3,     KC_4,    KC_5,          KC_6,    KC_7,     KC_8,      KC_9,   KC_0,   KC_TRNS,
 		KC_ENT,  KC_DEL,  KC_LEFT,     KC_UP, KC_DOWN,  KC_RGHT,        KC_GRV,  KC_UNDS, KC_EQL,    KC_LBRC, KC_RBRC, KC_TRNS,
-		KC_TRNS, KC_WH_L, KC_WH_R,    KC_WH_U, KC_WH_D, KC_TRNS,        KC_PIPE, KC_MINS, KC_TILD,    KC_QUOT, KC_BSLS, KC_TRNS,
+		KC_TRNS, KC_TRNS, KC_WH_L,    KC_WH_U, KC_WH_D, KC_WH_R,        KC_PIPE, KC_MINS, KC_TILD,    KC_QUOT, KC_BSLS, KC_TRNS,
 		KC_TRNS, KC_SYSREQ, TG(1),    KC_TRNS, KC_TRNS,        KC_TRNS,          MO(4), KC_TRNS,     TG(1), KC_APP, KC_TRNS),
 /* *** *** *** *** *** *** *** *** *** */
 
@@ -84,27 +84,27 @@ fingers:   (pinky     pinky    thumb      thumb    thumb           thumb        
 /* *** *** *** *** *** *** *** *** *** */
 /* Layer 3 (inside right of space) - navigation keys:
 
-            ____    ,scrollUp , Lclick ,(mouse U), Rclick  ,  ____  ,    insert  , pageUp , scrllLock ,  pageDown,  Home   , delete,
-            Capslock,scrollDn ,(mouseL),(mouse D),{mouse R},  ____  ,     (left) , {down} , ( up  ) ,   (right),   End   ,   ____,
-	    ____    , Lscroll , Rscroll,Calculator, ____   ,  ____  ,    numLock ,scrollDn,scrollUp,   Lscroll,  Rscroll,   ____,
+            ____    ,scrollUp , Lclick ,(mouse U), Rclick  ,  ____  ,      home  ,pageDown, pageUp ,   end  ,  Insert ,delete,
+            Capslock,scrollDn ,(mouseL),(mouse D),{mouse R},  ____  ,     (left) , {down} , ( up  ) ,   (right), ScrollLock, ____,
+	    ____    , Lscroll , Rscroll,Calculator, ____   ,  ____  ,    numLock ,scrollDn,scrollUp,   Lscroll,  Rscroll,    ____,
 	    ____    ,printScrn,ToggleL1,  {____}  , Layer 4,        ____  ,        [____] , {____} ,  ToggleL1, CAPSWRD,   ____.*/
 	KEYMAP(
-		KC_TRNS, KC_WH_U, KC_BTN1,    KC_MS_U, KC_BTN2, KC_TRNS,        KC_INS,  KC_PGUP, KC_SLCK,      KC_PGDN, KC_HOME, KC_DEL,
-		KC_CAPS, KC_WH_D, KC_MS_L,    KC_MS_D, KC_MS_R, KC_TRNS,        KC_LEFT, KC_DOWN,  KC_UP,   KC_RGHT, KC_END, KC_TRNS,
-		KC_TRNS, KC_WH_L, KC_WH_R,    KC_CALC, KC_TRNS, KC_TRNS,        KC_NLCK, KC_WH_D, KC_WH_U,    KC_WH_L, KC_WH_R, KC_TRNS,
+		KC_TRNS, KC_WH_U, KC_BTN1,    KC_MS_U, KC_BTN2, KC_TRNS,        KC_HOME, KC_PGDN, KC_PGUP,  KC_END , KC_INS , KC_DEL,
+		KC_CAPS, KC_WH_D, KC_MS_L,    KC_MS_D, KC_MS_R, KC_TRNS,        KC_LEFT, KC_DOWN,  KC_UP,   KC_RGHT, KC_SLCK, KC_TRNS,
+		KC_TRNS, KC_WH_L, KC_WH_R,    KC_CALC, KC_TRNS, KC_TRNS,        KC_WH_L, KC_WH_D, KC_WH_U,  KC_WH_R, KC_NLCK, KC_TRNS,
 		KC_TRNS, KC_PSCR, TG(1),      KC_TRNS, MO(4),          KC_TRNS,          KC_TRNS, KC_TRNS,    TG(1), CAPSWRD, KC_TRNS),
 /* *** *** *** *** *** *** *** *** *** */
 
 
 /* *** *** *** *** *** *** *** *** *** */
-/* Layer 4 (holding both inside func keys) - macros, LED, laptop display brightness, media (rwd/ff may not work):
+/* Layer 4 (holding both inside func keys) - macros, LED, laptop display brightness, media (rwd/ff only some players), toggle mvmt:
 
-            Layer 5 ,  ____   ,RGB hue-,(RGBbri+), RGB hue+,RGBplain,     ____   ,play/paus,   ____ ,  ____   ,    ____ ,    ____,
+            Layer 6 ,  ____   ,RGB hue-,(RGBbri+), RGB hue+,RGBplain,     ____   ,play/paus,   ____ ,  ____   ,    ____ , Toggle 5,
             ____    ,  ____   ,(RGBsat-),(RGBbri-),{RBGsat+},RGBon/off,  (mdiaRwd),{scnBri-},(scnBri+),(mdiaFF),   ____ ,    ____,
             recMacro1, ____   , playMcr1,  ____  , RGB:mode,RGBswirl,       mute  , volume-,   volume+, plyMacro2, ____ , recMcr2,
             ____    ,  ____   , ____   ,  {____} , [____]  ,        ____  ,        [____] ,    {____} ,  ____  ,   ___  ,  ____.*/
 	KEYMAP(
-		MO(5),   KC_TRNS, RGB_HUD,    RGB_VAI, RGB_HUI, RGB_M_P,      KC_TRNS, KC_MPLY, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS,
+		MO(6),   KC_TRNS, RGB_HUD,    RGB_VAI, RGB_HUI, RGB_M_P,      KC_TRNS, KC_MPLY, KC_TRNS,    KC_TRNS, KC_TRNS, TG(5),
 		KC_TRNS, KC_TRNS, RGB_SAD,    RGB_VAD, RGB_SAI, RGB_TOG,      KC_MRWD, KC_BRID, KC_BRIU,    KC_MFFD, KC_TRNS, KC_TRNS,
 		DM_REC1, KC_TRNS, DM_PLY1,    KC_TRNS, RGB_MOD, RGB_M_SW,     KC_MUTE, KC_VOLD, KC_VOLU,    DM_PLY2, KC_TRNS, DM_REC2,
 		KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS,        KC_TRNS,        KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS),
@@ -112,7 +112,22 @@ fingers:   (pinky     pinky    thumb      thumb    thumb           thumb        
 
 
 /* *** *** *** *** *** *** *** *** *** */
-/* Bootloader key hidden in Layer 5 - two inside fn keys + two upper corner keys (esc,bkspc) to avoid pressing accidentally:
+/* Toggled movement-only Layer 5 for navigating a document using only one finger, on either side of the keyboard:
+              ____    ,  ____   ,   home , (pageUp), pageDown,  end  ,     home   ,pageDown, pageUp ,     end  ,  ____   ,[[____]],
+              ____    ,ScrollLock,(left) ,  ( up ) , {down}  ,  right,    (left)  , {down} , ( up ) ,   (right) ,ScrollLock, ____,
+	      ____    ,  ____   ,LftScroll, UpScroll,DnScroll, RtScroll,    LftScroll, DwnScroll,UpScroll, RtScroll, ____  ,  ____,
+	      ____    ,  ____   , ____   ,  {____} ,[[____]] ,        ____  ,       [[____]], {____} ,    ____  ,  ____  ,    ____.
+*/
+	KEYMAP(
+		KC_TRNS, KC_TRNS, KC_HOME,    KC_PGUP, KC_PGDN,  KC_END,        KC_HOME, KC_PGDN, KC_PGUP,    KC_END , KC_TRNS, KC_TRNS,
+		KC_TRNS, KC_SLCK, KC_LEFT,     KC_UP,  KC_DOWN,  KC_RGHT,       KC_LEFT, KC_DOWN,  KC_UP,     KC_RGHT,  KC_SLCK, KC_TRNS,
+		KC_TRNS, KC_TRNS, KC_WH_L,    KC_WH_U, KC_WH_D, KC_WH_R,        KC_WH_L, KC_WH_D, KC_WH_U,    KC_WH_R, KC_TRNS, KC_TRNS,
+		KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS,        KC_TRNS,         KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS),
+/* *** *** *** *** *** *** *** *** *** */
+
+
+/* *** *** *** *** *** *** *** *** *** */
+/* Bootloader key hidden in Layer 6 - two inside fn keys + two upper corner keys (esc,bkspc) to avoid pressing accidentally:
              [____]  ,  ____   ,  ____  ,  (____) ,  ____   ,  ____  ,     ____   ,  ____  ,  ____  ,    ____   , ____   ,  RESET,
              ____    ,  ____   , (____) ,  (____) , {____}  ,  ____  ,    (____)  , {____} , (____) ,   (____) ,  ____   ,   ____,
 	     ____    ,  ____   , ____   ,   ____  ,  ____   ,  ____  ,     ____   ,  ____  ,  ____  ,    ____  ,  ____   ,   ____,
@@ -139,7 +154,6 @@ fingers:   (pinky     pinky    thumb      thumb    thumb           thumb        
 		KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS,        KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS,
 		KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS,        KC_TRNS,         KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS),
 /* *** *** *** *** *** *** *** *** *** */
-
 
 
 };
