@@ -11,10 +11,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    I switch the orientation of bottom row R1 keycaps for Spacebar and Layers so that the Alt keys' higher profile serves as tactile mark. 
    ***
    0-BASE layer with Shift, Control, Alt/AltGr, Super/Win on both sides, Esc, Tab, Bkspc, Enter like a traditional layout.
-   3-NAVIGATION layer: HJKL arrows+home/end,pgUp/Dn,Insert,ScrLk around; ESDF+WR mouse controls; M,./ four-way scroll, Del on top right.
-   2-SYMBOLS layer: quotes,brackets+more on right;top number row(shifted by OS);ZXCV four-way scroll+SDFG arrows;Bksp,Del,Enter top left.
-   1-NUMPAD+Fs: numberpad with 0123 under ZXCV, 789>WER; F-keys on right side F1-4>M-/ , F5-8>J-; , F9-12>U-P ; Esc,Tab on upper right.
-   4-(under 2+3) MEDIA+LED; macro record and playback on bottom left and right corners; 5-BOOTLOADER key hidden under L2+L3+esc+bkspc.
+   3-NAVIGATION layer: [HJKL]arrows, [YUIO]Hm/pgUp/Dn/End, [NM,.] 4-way scroll;[P;/]Insert,ScrLk,NumLk;topright Del;[ESDF+WR] mouse+clicks.
+   2-SYMBOLS layer: quotes,brackets+ on right;top number row(shifted by OS);mirrored [XCVB]4way scroll+[SDFG]arrows;Bksp,Del,Enter top left.
+   1-NUMPAD+Fs: numberpad with 0123 under [ZXCV], [WER]789; F-keys on right [M-/]F1-F4, [J-;]F5-F8, [U-P]F9-F12; Esc,Tab on upper right.
+   L3, L2, L1 keys also access CapsLk, CapsWord, PrintScreen; Menu, SysRq; SysPause; combined with Super or Tab keys (see diagrams below).
+   4-HW CONTROLS under [L2+L3]: Media,internal screen brightness,LED controls; Macro record and playback on bottom left and right corners.
+   5-toggled MOVEMENT-only layer under [L2+L3+bkspc];  6-BOOTLOADER key hidden under [L2+L3+esc] then [bkspc].
    ***
    * Changes I make in OS custom kb layout: SHIFTED number row,tilde,grave,dash,underscore;  AltGr + aeiouyn!? > áéíóúüñ¡¿ for Spanish.
 
