@@ -71,7 +71,7 @@ fingers:   (pinky     pinky    thumb      thumb    thumb           thumb        
 
             Bkspc   ,    1*   ,    2*  ,  ( 3* ) ,    4*   ,   5*   ,         6*  ,    7*  ,   8*   ,     9*   ,    0*   ,   ____,
             Enter   , Delete  , (left) , (  up  ),  {down} ,  right ,      (`grave*),{_und* },( = ) ,   ( [brc),     ]brc,   ____,
-	    ____    , Lscroll , Rscroll,scroll Up, scrollDn,  ____  ,       |pipe,   -dash*, ~tilde*,     'quot,  \backsl,   ____,
+	    ____    ,  ____   , Lscroll,scroll Up, scrollDn,Rscroll ,       |pipe,   -dash*, ~tilde*,     'quot,  \backsl,   ____,
 	    ____    , SysReq  ,ToggleL1,  {____}  , [____] ,        ____  ,        Layer 4, {____} ,  ToggleL1, app/menu,   ____.*/
 	KEYMAP(
 		KC_BSPC,    KC_1,   KC_2,     KC_3,     KC_4,    KC_5,          KC_6,    KC_7,     KC_8,      KC_9,   KC_0,   KC_TRNS,
@@ -84,10 +84,10 @@ fingers:   (pinky     pinky    thumb      thumb    thumb           thumb        
 /* *** *** *** *** *** *** *** *** *** */
 /* Layer 3 (inside right of space) - navigation keys:
 
-            ____    ,scrollUp , Lclick ,(mouse U), Rclick  ,  ____  ,      home  ,pageDown, pageUp ,   end  ,  Insert ,delete,
-            Capslock,scrollDn ,(mouseL),(mouse D),{mouse R},  ____  ,     (left) , {down} , ( up  ) ,   (right), ScrollLock, ____,
-	    ____    , Lscroll , Rscroll,Calculator, ____   ,  ____  ,    numLock ,scrollDn,scrollUp,   Lscroll,  Rscroll,    ____,
-	    ____    ,printScrn,ToggleL1,  {____}  , Layer 4,        ____  ,        [____] , {____} ,  ToggleL1, CAPSWRD,   ____.*/
+            ____    ,scrollUp , Lclick ,(mouse U), Rclick  ,  ____  ,        home  ,pageDown, pageUp ,   end  ,    Insert ,  delete,
+            Capslock,scrollDn ,(mouseL),(mouse D),{mouse R},  ____  ,       (left) , {down} , ( up  ) ,   (right),ScrollLock,  ____,
+	    ____    , Lscroll , Rscroll,Calculator, ____   ,  ____  ,      Lscroll ,scrollDn,scrollUp,   Rscroll,  NumLock ,   ____,
+	    ____    ,printScrn,ToggleL1,  {____}  , Layer 4,        ____  ,          [____] , {____} ,  ToggleL1, CAPSWRD,   ____.*/
 	KEYMAP(
 		KC_TRNS, KC_WH_U, KC_BTN1,    KC_MS_U, KC_BTN2, KC_TRNS,        KC_HOME, KC_PGDN, KC_PGUP,  KC_END , KC_INS , KC_DEL,
 		KC_CAPS, KC_WH_D, KC_MS_L,    KC_MS_D, KC_MS_R, KC_TRNS,        KC_LEFT, KC_DOWN,  KC_UP,   KC_RGHT, KC_SLCK, KC_TRNS,
