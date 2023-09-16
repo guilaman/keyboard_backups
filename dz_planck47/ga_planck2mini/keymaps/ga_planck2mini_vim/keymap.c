@@ -4,19 +4,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Thanks to Jack Humbert and the QMK community for creating these powerful tools and making them freely available. Keymap by guilaman:
    47-key Planck 4-layer Qwerty keymap with Shift,Control,Alt,Super on both sides and more functions than a 108-key board:Numpad,F1-12;
-   left+right one-handed scroll+arrows, Enter,Bkspc,Del,Tab,Esc on either hand;NumLk,ScrLk,PrScn,Menu,Ins,SysRq,mouse,media,macros,LED.
+   left+right one-hand movement+jumps, Enter,Bkspc,Del,Tab,Esc on either hand;NumLk,ScrLk,PrScn,Menu,Ins,SysRq,mouse,media,macros,LED.
  
    * This keymap has HJKL arrow keys to match Vim gestures; if not using Vim then IJKL arrows will be more friendly and intuitive.
    * Layers 3 and 2 activated from thumb resting positions on either side of Spacebar; two keys for Layer 1 with thumbs outside of alts;
    I switch the orientation of bottom row R1 keycaps for Spacebar and Layers so that the Alt keys' higher profile serves as tactile mark. 
    ***
    0-BASE layer with Shift, Control, Alt/AltGr, Super/Win on both sides, Esc, Tab, Bkspc, Enter like a traditional layout.
-   3-NAVIGATION layer:[HJKL]arrows,[YUIO]pgUp/Hm/End/pgDn, [NM,.] 4-way scroll;[P;/]Insert,ScrLk,NumLk;topright Del;[ESDF+WR] mouse+clicks.
-   2-SYMBOLS layer: quotes,brackets+ on right;top number row(shifted by OS);mirrored [XCVB]4way scroll+[SDFG]arrows;Bksp,Del,Enter top left.
-   1-NUMPAD+Fs: numberpad with 0123 under [ZXCV], [WER]789; F-keys on right [M-/]F1-F4, [J-;]F5-F8, [U-P]F9-F12; Esc,Tab on upper right.
+   4-NAVIGATION layer:[HJKL]arrows,[YUIO]pgUp/Hm/End/pgDn, [NM,.] 4-way scroll;[P;/]Insert,ScrLk,NumLk;topright Del;[ESDF+WR] mouse+clicks.
+   3-SYMBOLS layer: quotes,brackets+ on right;top number row(shifted by OS);mirrored [XCVB]4way scroll+[SDFG]arrows;Bksp,Del,Enter top left.
+   2-NUMPAD+Fs: numberpad with 0123 under [ZXCV], [WER]789; F-keys on right [M-/]F1-F4, [J-;]F5-F8, [U-P]F9-F12; Esc,Tab on upper right.
    L3, L2, L1 keys also access CapsLk, CapsWord, PrintScreen; Menu, SysRq; SysPause; combined with Super or Tab keys (see diagrams below).
-   4-HW CONTROLS under [L2+L3]: Media,internal screen brightness,LED controls; Macro record and playback on bottom left and right corners.
-   5-toggled MOVEMENT-only layer under [L2+L3+bkspc];  6-BOOTLOADER key hidden under [L2+L3+esc] then [bkspc].
+   5-HW CONTROLS under [L2+L3]: Media,internal screen brightness,LED controls; Macro record and playback on bottom left and right corners.
+   1-toggled MOVEMENT-only layer under [L2+L3+bkspc].
+   6-BOOTLOADER key hidden under [L2+L3+esc] then [bkspc].
    ***
    * Changes I make in OS custom kb layout: SHIFTED number row,tilde,grave,dash,underscore;  AltGr + aeiouyn!? > áéíóúüñ¡¿ for Spanish.
 
@@ -54,7 +55,22 @@ fingers:   (pinky     pinky    thumb      thumb    thumb           thumb        
 
 
 /* *** *** *** *** *** *** *** *** *** */
-/* Layer1  (Fn keys outside of Alts) - numberpad on left (+inside function keys to toggle), F keys on right:
+/* Toggled movement-only Layer 1 for navigating a document using only one finger, on either side of the keyboard:
+              ____    ,  ____   ,   home , (pageUp), pageDown,  end  ,     pageUp ,  end  ,  home ,    pageDn ,  ____   ,[[____]],
+              ____    ,ScrollLock,(left) ,  ( up ) , {down}  ,  right,    (left)  , {down} , ( up ) ,   (right) ,ScrollLock, ____,
+	      ____    ,  ____   ,LftScroll, UpScroll,DnScroll, RtScroll,    LftScroll, DwnScroll,UpScroll, RtScroll, ____  ,  ____,
+	      ____    ,  ____   , ____   ,  {____} ,[[____]] ,        ____  ,       [[____]], {____} ,    ____  ,  ____  ,    ____.
+*/
+	KEYMAP(
+		_______, _______, KC_PGUP,    KC_HOME, KC_END,  KC_PGDN,        KC_PGUP, KC_END, KC_HOME,    KC_PGDN, _______, _______,
+		_______, KC_SLCK, KC_LEFT,     KC_UP,  KC_DOWN,  KC_RGHT,       KC_LEFT, KC_DOWN,  KC_UP,     KC_RGHT,  KC_SLCK, _______,
+		_______, _______, KC_WH_L,    KC_WH_U, KC_WH_D, KC_WH_R,        KC_WH_L, KC_WH_D, KC_WH_U,    KC_WH_R, _______, _______,
+		_______, _______, _______,    _______, _______,        _______,         _______, _______,    _______, _______, _______),
+/* *** *** *** *** *** *** *** *** *** */
+
+
+/* *** *** *** *** *** *** *** *** *** */
+/* Layer2  (Fn keys outside of Alts) - numberpad on left (+inside function keys to toggle), F keys on right:
 
             ____    ,scrollUp,  pad 7 ,   (pad 8),  pad 9 ,   /    ,      pad * ,   F9   ,   F10  ,    F11   ,   F12  ,     Esc,
             ____    ,scrollDn, (pad 4),   (pad 5), {pad 6}, _undscr,     ( + )  ,  {F5}  ,  (F6)  ,   (F7)   ,   F8   ,     Tab,
@@ -69,7 +85,7 @@ fingers:   (pinky     pinky    thumb      thumb    thumb           thumb        
 
 
 /* *** *** *** *** *** *** *** *** *** */
-/* Layer 2 (inside left of space) - symbols/numbers (*SHIFTED BY OS IN MY SETUP: top row,TILDE,GRV,DASH,UNDS);left hand controls:
+/* Layer 3 (inside left of space) - symbols/numbers (*SHIFTED BY OS IN MY SETUP: top row,TILDE,GRV,DASH,UNDS);left hand controls:
 
             Bkspc   ,    1*   ,    2*  ,  ( 3* ) ,    4*   ,   5*   ,         6*  ,    7*  ,   8*   ,     9*   ,    0*   ,   ____,
             Enter   , Delete  , (left) , (  up  ),  {down} ,  right ,      (`grave*),{_und* },( = ) ,   ( [brc),     ]brc,   ____,
@@ -84,10 +100,10 @@ fingers:   (pinky     pinky    thumb      thumb    thumb           thumb        
 
 
 /* *** *** *** *** *** *** *** *** *** */
-/* Layer 3 (inside right of space) - navigation keys:
+/* Layer 4 (inside right of space) - navigation keys:
 
-            ____    ,scrollUp , Lclick ,(mouse U), Rclick  ,  ____  ,        home  ,pageDown, pageUp ,   end  ,    Insert ,  delete,
-            Capslock,scrollDn ,(mouseL),(mouse D),{mouse R},  ____  ,       (left) , {down} , ( up  ) ,   (right),ScrollLock,  ____,
+            ____    ,scrollUp , Lclick ,(mouse U), Rclick  ,  ____  ,       pageUp ,  end  ,  home ,    pageDn ,   Insert ,  delete,
+            Capslock,scrollDn ,(mouseL),(mouse D),{mouse R},  ____  ,       (left) , {down} , ( up  ) ,  (right) ,ScrollLock,  ____,
 	    ____    , Lscroll , Rscroll,Calculator, ____   ,  ____  ,      Lscroll ,scrollDn,scrollUp,   Rscroll,  NumLock ,   ____,
 	    ____    ,printScrn,ToggleL1,  {____}  , Layer 4,        ____  ,          [____] , {____} ,  ToggleL1, CAPSWRD,   ____.*/
 	KEYMAP(
@@ -99,7 +115,7 @@ fingers:   (pinky     pinky    thumb      thumb    thumb           thumb        
 
 
 /* *** *** *** *** *** *** *** *** *** */
-/* Layer 4 (holding both inside func keys) - macros, LED, laptop display brightness, media (rwd/ff only some players), toggle mvmt:
+/* Layer 5 (holding both inside func keys) - macros, LED, laptop display brightness, media (rwd/ff only some players), toggle mvmt:
 
             Layer 6 ,  ____   ,RGB hue-,(RGBbri+), RGB hue+,RGBplain,     ____   ,play/paus,   ____ ,  ____   ,    ____ , Toggle 5,
             ____    ,  ____   ,(RGBsat-),(RGBbri-),{RBGsat+},RGBon/off,  (mdiaRwd),{scnBri-},(scnBri+),(mdiaFF),   ____ ,    ____,
@@ -110,21 +126,6 @@ fingers:   (pinky     pinky    thumb      thumb    thumb           thumb        
 		_______, _______, RGB_SAD,    RGB_VAD, RGB_SAI, RGB_TOG,      KC_MRWD, KC_BRID, KC_BRIU,    KC_MFFD, _______, _______,
 		DM_REC1, _______, DM_PLY1,    _______, RGB_MOD, RGB_M_SW,     KC_MUTE, KC_VOLD, KC_VOLU,    DM_PLY2, _______, DM_REC2,
 		_______, _______, _______,    _______, _______,        _______,        _______, _______,    _______, _______, _______),
-/* *** *** *** *** *** *** *** *** *** */
-
-
-/* *** *** *** *** *** *** *** *** *** */
-/* Toggled movement-only Layer 5 for navigating a document using only one finger, on either side of the keyboard:
-              ____    ,  ____   ,   home , (pageUp), pageDown,  end  ,     home   ,pageDown, pageUp ,     end  ,  ____   ,[[____]],
-              ____    ,ScrollLock,(left) ,  ( up ) , {down}  ,  right,    (left)  , {down} , ( up ) ,   (right) ,ScrollLock, ____,
-	      ____    ,  ____   ,LftScroll, UpScroll,DnScroll, RtScroll,    LftScroll, DwnScroll,UpScroll, RtScroll, ____  ,  ____,
-	      ____    ,  ____   , ____   ,  {____} ,[[____]] ,        ____  ,       [[____]], {____} ,    ____  ,  ____  ,    ____.
-*/
-	KEYMAP(
-		_______, _______, KC_PGUP,    KC_HOME, KC_END,  KC_PGDN,        KC_PGUP, KC_END, KC_HOME,    KC_PGDN, _______, _______,
-		_______, KC_SLCK, KC_LEFT,     KC_UP,  KC_DOWN,  KC_RGHT,       KC_LEFT, KC_DOWN,  KC_UP,     KC_RGHT,  KC_SLCK, _______,
-		_______, _______, KC_WH_L,    KC_WH_U, KC_WH_D, KC_WH_R,        KC_WH_L, KC_WH_D, KC_WH_U,    KC_WH_R, _______, _______,
-		_______, _______, _______,    _______, _______,        _______,         _______, _______,    _______, _______, _______),
 /* *** *** *** *** *** *** *** *** *** */
 
 
