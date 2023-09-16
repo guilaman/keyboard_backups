@@ -11,7 +11,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    I switch the orientation of bottom row R1 keycaps for Spacebar and Layers so that the Alt keys' higher profile serves as tactile mark. 
    ***
    0-BASE layer with Shift, Control, Alt/AltGr, Super/Win on both sides, Esc, Tab, Bkspc, Enter like a traditional layout.
-   3-NAVIGATION layer: [HJKL]arrows, [YUIO]Hm/pgUp/Dn/End, [NM,.] 4-way scroll;[P;/]Insert,ScrLk,NumLk;topright Del;[ESDF+WR] mouse+clicks.
+   3-NAVIGATION layer:[HJKL]arrows,[YUIO]pgUp/Hm/End/pgDn, [NM,.] 4-way scroll;[P;/]Insert,ScrLk,NumLk;topright Del;[ESDF+WR] mouse+clicks.
    2-SYMBOLS layer: quotes,brackets+ on right;top number row(shifted by OS);mirrored [XCVB]4way scroll+[SDFG]arrows;Bksp,Del,Enter top left.
    1-NUMPAD+Fs: numberpad with 0123 under [ZXCV], [WER]789; F-keys on right [M-/]F1-F4, [J-;]F5-F8, [U-P]F9-F12; Esc,Tab on upper right.
    L3, L2, L1 keys also access CapsLk, CapsWord, PrintScreen; Menu, SysRq; SysPause; combined with Super or Tab keys (see diagrams below).
@@ -61,10 +61,10 @@ fingers:   (pinky     pinky    thumb      thumb    thumb           thumb        
             ____    ,  pad 0 ,  pad 1 ,    pad 2 ,  pad 3 ,   ,    ,       .    ,   F1   ,   F2   ,    F3    ,   F4   ,    ____,
             ____    ,PadEnter, [____] ,   {____} ,  ____  ,         ____ ,         ____  , {____} ,   [____] ,SysPause,    ____.*/
 	KEYMAP(
-		KC_TRNS, KC_WH_U, KC_P7,      KC_P8, KC_P9, KC_SLSH,         KC_PAST,  KC_F9,  KC_F10,    KC_F11, KC_F12, KC_ESC,
-		KC_TRNS, KC_WH_D, KC_P4,      KC_P5, KC_P6, KC_UNDS,         KC_PLUS,  KC_F5,  KC_F6,     KC_F7, KC_F8, KC_TAB,
-		KC_TRNS, KC_P0,   KC_P1,      KC_P2, KC_P3, KC_COMM,         KC_DOT,   KC_F1,  KC_F2,     KC_F3, KC_F4, KC_TRNS,
-		KC_TRNS, KC_PENT, KC_TRNS,    KC_TRNS, KC_TRNS,       KC_TRNS,       KC_TRNS, KC_TRNS,    KC_TRNS, KC_PAUS, KC_TRNS),
+		_______, KC_WH_U, KC_P7,      KC_P8, KC_P9, KC_SLSH,         KC_PAST,  KC_F9,  KC_F10,    KC_F11, KC_F12, KC_ESC,
+		_______, KC_WH_D, KC_P4,      KC_P5, KC_P6, KC_UNDS,         KC_PLUS,  KC_F5,  KC_F6,     KC_F7, KC_F8, KC_TAB,
+		_______, KC_P0,   KC_P1,      KC_P2, KC_P3, KC_COMM,         KC_DOT,   KC_F1,  KC_F2,     KC_F3, KC_F4, _______,
+		_______, KC_PENT, _______,    _______, _______,       _______,       _______, _______,    _______, KC_PAUS, _______),
 /* *** *** *** *** *** *** *** *** *** */
 
 
@@ -76,10 +76,10 @@ fingers:   (pinky     pinky    thumb      thumb    thumb           thumb        
 	    ____    ,  ____   , Lscroll,scroll Up, scrollDn,Rscroll ,       |pipe,   -dash*, ~tilde*,     'quot,  \backsl,   ____,
 	    ____    , SysReq  ,ToggleL1,  {____}  , [____] ,        ____  ,        Layer 4, {____} ,  ToggleL1, app/menu,   ____.*/
 	KEYMAP(
-		KC_BSPC,    KC_1,   KC_2,     KC_3,     KC_4,    KC_5,          KC_6,    KC_7,     KC_8,      KC_9,   KC_0,   KC_TRNS,
-		KC_ENT,  KC_DEL,  KC_LEFT,     KC_UP, KC_DOWN,  KC_RGHT,        KC_GRV,  KC_UNDS, KC_EQL,    KC_LBRC, KC_RBRC, KC_TRNS,
-		KC_TRNS, KC_TRNS, KC_WH_L,    KC_WH_U, KC_WH_D, KC_WH_R,        KC_PIPE, KC_MINS, KC_TILD,    KC_QUOT, KC_BSLS, KC_TRNS,
-		KC_TRNS, KC_SYSREQ, TG(1),    KC_TRNS, KC_TRNS,        KC_TRNS,          MO(4), KC_TRNS,     TG(1), KC_APP, KC_TRNS),
+		KC_BSPC,    KC_1,   KC_2,     KC_3,     KC_4,    KC_5,          KC_6,    KC_7,     KC_8,      KC_9,   KC_0,   _______,
+		KC_ENT,  KC_DEL,  KC_LEFT,     KC_UP, KC_DOWN,  KC_RGHT,        KC_GRV,  KC_UNDS, KC_EQL,    KC_LBRC, KC_RBRC, _______,
+		_______, _______, KC_WH_L,    KC_WH_U, KC_WH_D, KC_WH_R,        KC_PIPE, KC_MINS, KC_TILD,    KC_QUOT, KC_BSLS, _______,
+		_______, KC_SYSREQ, TG(1),    _______, _______,        _______,          MO(4), _______,     TG(1), KC_APP, _______),
 /* *** *** *** *** *** *** *** *** *** */
 
 
@@ -91,10 +91,10 @@ fingers:   (pinky     pinky    thumb      thumb    thumb           thumb        
 	    ____    , Lscroll , Rscroll,Calculator, ____   ,  ____  ,      Lscroll ,scrollDn,scrollUp,   Rscroll,  NumLock ,   ____,
 	    ____    ,printScrn,ToggleL1,  {____}  , Layer 4,        ____  ,          [____] , {____} ,  ToggleL1, CAPSWRD,   ____.*/
 	KEYMAP(
-		KC_TRNS, KC_WH_U, KC_BTN1,    KC_MS_U, KC_BTN2, KC_TRNS,        KC_HOME, KC_PGDN, KC_PGUP,  KC_END , KC_INS , KC_DEL,
-		KC_CAPS, KC_WH_D, KC_MS_L,    KC_MS_D, KC_MS_R, KC_TRNS,        KC_LEFT, KC_DOWN,  KC_UP,   KC_RGHT, KC_SLCK, KC_TRNS,
-		KC_TRNS, KC_WH_L, KC_WH_R,    KC_CALC, KC_TRNS, KC_TRNS,        KC_WH_L, KC_WH_D, KC_WH_U,  KC_WH_R, KC_NLCK, KC_TRNS,
-		KC_TRNS, KC_PSCR, TG(1),      KC_TRNS, MO(4),          KC_TRNS,          KC_TRNS, KC_TRNS,    TG(1), CAPSWRD, KC_TRNS),
+		_______, KC_WH_U, KC_BTN1,    KC_MS_U, KC_BTN2, _______,        KC_PGUP, KC_END, KC_HOME,   KC_PGDN, KC_INS , KC_DEL,
+		KC_CAPS, KC_WH_D, KC_MS_L,    KC_MS_D, KC_MS_R, _______,        KC_LEFT, KC_DOWN,  KC_UP,   KC_RGHT, KC_SLCK, _______,
+		_______, KC_WH_L, KC_WH_R,    KC_CALC, _______, _______,        KC_WH_L, KC_WH_D, KC_WH_U,  KC_WH_R, KC_NLCK, _______,
+		_______, KC_PSCR, TG(1),      _______, MO(4),          _______,          _______, _______,    TG(1), CAPSWRD, _______),
 /* *** *** *** *** *** *** *** *** *** */
 
 
@@ -106,10 +106,10 @@ fingers:   (pinky     pinky    thumb      thumb    thumb           thumb        
             recMacro1, ____   , playMcr1,  ____  , RGB:mode,RGBswirl,       mute  , volume-,   volume+, plyMacro2, ____ , recMcr2,
             ____    ,  ____   , ____   ,  {____} , [____]  ,        ____  ,        [____] ,    {____} ,  ____  ,   ___  ,  ____.*/
 	KEYMAP(
-		MO(6),   KC_TRNS, RGB_HUD,    RGB_VAI, RGB_HUI, RGB_M_P,      KC_TRNS, KC_MPLY, KC_TRNS,    KC_TRNS, KC_TRNS, TG(5),
-		KC_TRNS, KC_TRNS, RGB_SAD,    RGB_VAD, RGB_SAI, RGB_TOG,      KC_MRWD, KC_BRID, KC_BRIU,    KC_MFFD, KC_TRNS, KC_TRNS,
-		DM_REC1, KC_TRNS, DM_PLY1,    KC_TRNS, RGB_MOD, RGB_M_SW,     KC_MUTE, KC_VOLD, KC_VOLU,    DM_PLY2, KC_TRNS, DM_REC2,
-		KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS,        KC_TRNS,        KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS),
+		MO(6),   _______, RGB_HUD,    RGB_VAI, RGB_HUI, RGB_M_P,      _______, KC_MPLY, _______,    _______, _______, TG(5),
+		_______, _______, RGB_SAD,    RGB_VAD, RGB_SAI, RGB_TOG,      KC_MRWD, KC_BRID, KC_BRIU,    KC_MFFD, _______, _______,
+		DM_REC1, _______, DM_PLY1,    _______, RGB_MOD, RGB_M_SW,     KC_MUTE, KC_VOLD, KC_VOLU,    DM_PLY2, _______, DM_REC2,
+		_______, _______, _______,    _______, _______,        _______,        _______, _______,    _______, _______, _______),
 /* *** *** *** *** *** *** *** *** *** */
 
 
@@ -121,10 +121,10 @@ fingers:   (pinky     pinky    thumb      thumb    thumb           thumb        
 	      ____    ,  ____   , ____   ,  {____} ,[[____]] ,        ____  ,       [[____]], {____} ,    ____  ,  ____  ,    ____.
 */
 	KEYMAP(
-		KC_TRNS, KC_TRNS, KC_HOME,    KC_PGUP, KC_PGDN,  KC_END,        KC_HOME, KC_PGDN, KC_PGUP,    KC_END , KC_TRNS, KC_TRNS,
-		KC_TRNS, KC_SLCK, KC_LEFT,     KC_UP,  KC_DOWN,  KC_RGHT,       KC_LEFT, KC_DOWN,  KC_UP,     KC_RGHT,  KC_SLCK, KC_TRNS,
-		KC_TRNS, KC_TRNS, KC_WH_L,    KC_WH_U, KC_WH_D, KC_WH_R,        KC_WH_L, KC_WH_D, KC_WH_U,    KC_WH_R, KC_TRNS, KC_TRNS,
-		KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS,        KC_TRNS,         KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS),
+		_______, _______, KC_PGUP,    KC_HOME, KC_END,  KC_PGDN,        KC_PGUP, KC_END, KC_HOME,    KC_PGDN, _______, _______,
+		_______, KC_SLCK, KC_LEFT,     KC_UP,  KC_DOWN,  KC_RGHT,       KC_LEFT, KC_DOWN,  KC_UP,     KC_RGHT,  KC_SLCK, _______,
+		_______, _______, KC_WH_L,    KC_WH_U, KC_WH_D, KC_WH_R,        KC_WH_L, KC_WH_D, KC_WH_U,    KC_WH_R, _______, _______,
+		_______, _______, _______,    _______, _______,        _______,         _______, _______,    _______, _______, _______),
 /* *** *** *** *** *** *** *** *** *** */
 
 
@@ -136,10 +136,10 @@ fingers:   (pinky     pinky    thumb      thumb    thumb           thumb        
 	     ____    ,  ____   , ____   ,  {____} , [____]  ,        ____  ,        [____] , {____} ,    ____  ,  ____  ,    ____.
 */
 	KEYMAP(
-		KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS,        KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS,   RESET,
-		KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS,        KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS,
-		KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS,        KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS,
-		KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS,        KC_TRNS,         KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS),
+		_______, _______, _______,    _______, _______, _______,        _______, _______, _______,    _______, _______,   RESET,
+		_______, _______, _______,    _______, _______, _______,        _______, _______, _______,    _______, _______, _______,
+		_______, _______, _______,    _______, _______, _______,        _______, _______, _______,    _______, _______, _______,
+		_______, _______, _______,    _______, _______,        _______,         _______, _______,    _______, _______, _______),
 /* *** *** *** *** *** *** *** *** *** */
 
 
@@ -151,10 +151,10 @@ fingers:   (pinky     pinky    thumb      thumb    thumb           thumb        
 	      ____    ,  ____   , ____   ,  {____} ,  ____   ,        ____  ,         ____  , {____} ,    ____  ,  ____  ,    ____.
 */
 	KEYMAP(
-		KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS,        KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS,
-		KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS,        KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS,
-		KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS,        KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS,
-		KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS,        KC_TRNS,         KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS),
+		_______, _______, _______,    _______, _______, _______,        _______, _______, _______,    _______, _______, _______,
+		_______, _______, _______,    _______, _______, _______,        _______, _______, _______,    _______, _______, _______,
+		_______, _______, _______,    _______, _______, _______,        _______, _______, _______,    _______, _______, _______,
+		_______, _______, _______,    _______, _______,        _______,         _______, _______,    _______, _______, _______),
 /* *** *** *** *** *** *** *** *** *** */
 
 
