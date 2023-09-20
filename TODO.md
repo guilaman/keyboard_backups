@@ -11,3 +11,4 @@
 0. <s>done</s> Made a reasonable keymap.
 1. <s>done</s> Replaced all `KC_TRNS` with `_______` (seven underscores) for readability.
 2. <s>done</s> Fixed comma bug, improved upper corner keycodes.
+3. Fix commented section over each layer.
