@@ -86,7 +86,7 @@ fingers:   (pinky     pinky    thumb      thumb    thumb           thumb        
 /* *** *** *** *** *** *** *** *** *** */
 /* Layer 3 (inside right of space) - navigation keys:
 
-            ____    ,scrollUp , Lclick ,(mouse U), Rclick  ,  ____  ,        home  ,pageDown, pageUp ,   end  ,    Insert ,  delete,
+            ____    ,scrollUp , Lclick ,(mouse U), Rclick  ,  ____  ,      pageUp  ,   end  ,  home  ,    pageDn,  Insert ,  delete,
             Capslock,scrollDn ,(mouseL),(mouse D),{mouse R},  ____  ,       (left) , {down} , ( up  ) ,   (right),ScrollLock,  ____,
 	    ____    , Lscroll , Rscroll,Calculator, ____   ,  ____  ,      Lscroll ,scrollDn,scrollUp,   Rscroll,  NumLock ,   ____,
 	    ____    ,printScrn,ToggleL1,  {____}  , Layer 4,        ____  ,          [____] , {____} ,  ToggleL1, CAPSWRD,   ____.*/
@@ -106,17 +106,17 @@ fingers:   (pinky     pinky    thumb      thumb    thumb           thumb        
             recMacro1, ____   , playMcr1,  ____  , RGB:mode,RGBswirl,       mute  , volume-,   volume+, plyMacro2, ____ , recMcr2,
             ____    ,  ____   , ____   ,  {____} , [____]  ,        ____  ,        [____] ,    {____} ,  ____  ,   ___  ,  ____.*/
 	KEYMAP(
-		MO(6),   _______, RGB_HUD,    RGB_VAI, RGB_HUI, RGB_M_P,      _______, KC_MPLY, _______,    _______, _______, TG(5),
+		MO(6),   _______, RGB_HUD,    RGB_VAI, RGB_HUI, RGB_M_P,      _______, KC_MPLY, _______,    _______, _______, _______,
 		_______, _______, RGB_SAD,    RGB_VAD, RGB_SAI, RGB_TOG,      KC_MRWD, KC_BRID, KC_BRIU,    KC_MFFD, _______, _______,
 		DM_REC1, _______, DM_PLY1,    _______, RGB_MOD, RGB_M_SW,     KC_MUTE, KC_VOLD, KC_VOLU,    DM_PLY2, _______, DM_REC2,
-		_______, _______, _______,    _______, _______,        _______,        _______, _______,    _______, _______, _______),
+		_______, _______, _______,    _______, _______,         TG(5),        _______, _______,    _______, _______, _______),
 /* *** *** *** *** *** *** *** *** *** */
 
 
 /* *** *** *** *** *** *** *** *** *** */
 /* Toggled movement-only Layer 5 for navigating a document using only one finger, on either side of the keyboard:
-              ____    ,  ____   ,   home , (pageUp), pageDown,  end  ,     home   ,pageDown, pageUp ,     end  ,  ____   ,[[____]],
-              ____    ,ScrollLock,(left) ,  ( up ) , {down}  ,  right,    (left)  , {down} , ( up ) ,   (right) ,ScrollLock, ____,
+              ____    ,  ____   , pageUp , ( home ),   end   , pageDn ,     pageUp ,    end  ,  home  ,pageDown,  ____   ,[[____]],
+              ____    ,ScrollLock,(left) ,  ( up ) , {down}  ,  right,     (left)  , {down} , ( up ) ,   (right) ,ScrollLock, ____,
 	      ____    ,  ____   ,LftScroll, UpScroll,DnScroll, RtScroll,    LftScroll, DwnScroll,UpScroll, RtScroll, ____  ,  ____,
 	      ____    ,  ____   , ____   ,  {____} ,[[____]] ,        ____  ,       [[____]], {____} ,    ____  ,  ____  ,    ____.
 */
