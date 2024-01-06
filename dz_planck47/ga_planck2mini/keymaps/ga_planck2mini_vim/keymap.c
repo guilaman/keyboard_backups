@@ -72,13 +72,13 @@ fingers:   (pinky     pinky    thumb      thumb    thumb           thumb        
 /* *** *** *** *** *** *** *** *** *** */
 /* Layer 2 (inside left of space) - symbols/numbers (*SHIFTED BY OS IN MY SETUP: top row,TILDE,GRV,DASH,UNDS);left hand controls:
 
-            Bkspc   ,    1*   ,    2*  ,  ( 3* ) ,    4*   ,   5*   ,         6*  ,    7*  ,   8*   ,     9*   ,    0*   ,   ____,
-            Enter   , Delete  , (left) , (  up  ),  {down} ,  right ,      (`grave*),{_und* },( = ) ,   ( [brc),     ]brc,   ____,
+            Bkspc   , Delete  ,  pageUp ,   home  ,   end   , pageDn ,        6*  ,    7*  ,   8*   ,     9*   ,    0*   ,   ____,
+            Enter   ,ScrollLock, (left), (  up  ),  {down} , (right),      (`grave*),{_und* },( = ) ,   ( [brc),     ]brc,   ____,
 	    ____    ,  ____   , Lscroll,scroll Up, scrollDn,Rscroll ,       |pipe,   -dash*, ~tilde*,     'quot,  \backsl,   ____,
 	    ____    , SysReq  ,ToggleL1,  {____}  , [____] ,        ____  ,        Layer 4, {____} ,  ToggleL1, app/menu,   ____.*/
 	KEYMAP(
-		KC_BSPC,    KC_1,   KC_2,     KC_3,     KC_4,    KC_5,          KC_6,    KC_7,     KC_8,      KC_9,   KC_0,   _______,
-		KC_ENT,  KC_DEL,  KC_LEFT,     KC_UP, KC_DOWN,  KC_RGHT,        KC_GRV,  KC_UNDS, KC_EQL,    KC_LBRC, KC_RBRC, _______,
+		KC_BSPC, KC_DEL,  KC_PGUP,   KC_HOME,  KC_END,  KC_PGDN,        KC_6,    KC_7,     KC_8,      KC_9,   KC_0,   _______,
+		KC_ENT,  KC_SLCK,  KC_LEFT,     KC_UP, KC_DOWN,  KC_RGHT,        KC_GRV,  KC_UNDS, KC_EQL,    KC_LBRC, KC_RBRC, _______,
 		_______, _______, KC_WH_L,    KC_WH_U, KC_WH_D, KC_WH_R,        KC_PIPE, KC_MINS, KC_TILD,    KC_QUOT, KC_BSLS, _______,
 		_______, KC_SYSREQ, TG(1),    _______, _______,        _______,          MO(4), _______,     TG(1), KC_APP, _______),
 /* *** *** *** *** *** *** *** *** *** */
@@ -88,14 +88,14 @@ fingers:   (pinky     pinky    thumb      thumb    thumb           thumb        
 /* Layer 3 (inside right of space) - navigation keys:
 
 <<<<<<< HEAD
-            ____    ,scrollUp , Lclick ,(mouse U), Rclick  ,  ____  ,      pageUp  ,   end  ,  home  ,    pageDn,  Insert ,  delete,
-            Capslock,scrollDn ,(mouseL),(mouse D),{mouse R},  ____  ,       (left) , {down} , ( up  ) ,   (right),ScrollLock,  ____,
-	    ____    , Lscroll , Rscroll,Calculator, ____   ,  ____  ,      Lscroll ,scrollDn,scrollUp,   Rscroll,  NumLock ,   ____,
+            ____    ,    1*   ,    2*  ,   3*   ,    4*   ,   5*   ,      pageUp  ,   end  ,  home  ,    pageDn,  Insert ,  delete,
+            Capslock,  ____  ,(Lclick),(mouse U),{Rclick }, (____) ,       (left) , {down} , ( up  ) ,   (right),ScrollLock,  ____,
+	    ____    ,  ____  , mouseL , mouse D , mouse R ,  ____  ,      Lscroll ,scrollDn,scrollUp,   Rscroll,  NumLock ,   ____,
 	    ____    ,printScrn,ToggleL1,  {____}  , Layer 4,        ____  ,          [____] , {____} ,  ToggleL1, CAPSWRD,   ____.*/
 	KEYMAP(
-		_______, KC_WH_U, KC_BTN1,    KC_MS_U, KC_BTN2, _______,        KC_PGUP, KC_END, KC_HOME,   KC_PGDN, KC_INS , KC_DEL,
-		KC_CAPS, KC_WH_D, KC_MS_L,    KC_MS_D, KC_MS_R, _______,        KC_LEFT, KC_DOWN,  KC_UP,   KC_RGHT, KC_SLCK, _______,
-		_______, KC_WH_L, KC_WH_R,    KC_CALC, _______, _______,        KC_WH_L, KC_WH_D, KC_WH_U,  KC_WH_R, KC_NLCK, _______,
+		_______,    KC_1,   KC_2,     KC_3,     KC_4,    KC_5,          KC_PGUP, KC_END, KC_HOME,   KC_PGDN, KC_INS , KC_DEL,
+		KC_CAPS, _______, KC_BTN1,    KC_MS_U, KC_BTN2, _______,        KC_LEFT, KC_DOWN,  KC_UP,   KC_RGHT, KC_SLCK, _______,
+		_______, _______, KC_MS_L,    KC_MS_D, KC_MS_R, _______,        KC_WH_L, KC_WH_D, KC_WH_U,  KC_WH_R, KC_NLCK, _______,
 		_______, KC_PSCR, TG(1),      _______, MO(4),          _______,          _______, _______,    TG(1), CAPSWRD, _______),
 /* *** *** *** *** *** *** *** *** *** */
 
@@ -105,12 +105,12 @@ fingers:   (pinky     pinky    thumb      thumb    thumb           thumb        
 
             Layer 6 ,  ____   ,RGB hue-,(RGBbri+), RGB hue+,RGBplain,     ____   ,play/paus,   ____ ,  ____   ,    ____ , Toggle 5,
             ____    ,  ____   ,(RGBsat-),(RGBbri-),{RBGsat+},RGBon/off,  (mdiaRwd),{scnBri-},(scnBri+),(mdiaFF),   ____ ,    ____,
-            recMacro1, ____   , playMcr1,  ____  , RGB:mode,RGBswirl,       mute  , volume-,   volume+, plyMacro2, ____ , recMcr2,
+            recMacro1, ____   , playMcr1,Calculator, RGB:mode,RGBswirl,       mute  , volume-,   volume+, plyMacro2, ____ , recMcr2,
             ____    ,  ____   , ____   ,  {____} , [____]  ,        ____  ,        [____] ,    {____} ,  ____  ,   ___  ,  ____.*/
 	KEYMAP(
 		MO(6),   _______, RGB_HUD,    RGB_VAI, RGB_HUI, RGB_M_P,      _______, KC_MPLY, _______,    _______, _______, _______,
 		_______, _______, RGB_SAD,    RGB_VAD, RGB_SAI, RGB_TOG,      KC_MRWD, KC_BRID, KC_BRIU,    KC_MFFD, _______, _______,
-		DM_REC1, _______, DM_PLY1,    _______, RGB_MOD, RGB_M_SW,     KC_MUTE, KC_VOLD, KC_VOLU,    DM_PLY2, _______, DM_REC2,
+		DM_REC1, _______, DM_PLY1,    KC_CALC, RGB_MOD, RGB_M_SW,     KC_MUTE, KC_VOLD, KC_VOLU,    DM_PLY2, _______, DM_REC2,
 		_______, _______, _______,    _______, _______,         TG(5),        _______, _______,    _______, _______, _______),
 /* *** *** *** *** *** *** *** *** *** */
 
